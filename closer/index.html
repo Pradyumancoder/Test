@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closer movies</title>
+    <style>
+        #movies{
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+            border-top: none;
+            overflow: scroll;
+            background-color: aqua;
+            color: blue;
+        }
+        #query{
+            width: 205px;
+            background-color: pink;
+            color: black
+        }
+        #container{
+            height: 300px;
+            width: 300px;
+            border: 1px solid greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>HOtsTAr</h1>
+<input oninput="debounce(main,1000)" type="text" id="query"/>
+
+<div id="movies"></div>
+<div id="movies1"></div>
+
+
+
+</body>
+</html>
+<script>
+    let movies_div=document.getElementById("movies");
+let id;
+
+    async function searchMovies(){
+
+        try{
+            const query =document.getElementById("query").value;
+            const res =await fetch(`https://www.omdbapi.com/?apikey=20159b4d&s=${query}`)
+
+           const data=await res.json();
+
+        //    console.log("data:",data)
+        
+           const movies=data.Search;
+           return movies;
+    
+        }
+        catch(err){
+            console.log("err:",err);
+        }
+    }
+    function appendMovies(data){
+        movies_div.innerHTML= null;
+        data.forEach(function(el){
+            let p=document.createElement("p");
+            p.innerText = el.Title;
+            p.addEventListener("click",function(){
+        videopic(el)
+            })
+
+            movies_div.append(p);
+     });
+ }
+
+    async function main(){
+        let data=await searchMovies();
+
+        if(data == undefined){
+            return false;
+        }
+        appendMovies(data);
+    }
+
+    function debounce(func, delay){
+        if(id){ 
+            clearTimeout(id)
+        }
+
+         id=setTimeout(function(){
+            func();
+        
+        }, delay)
+    }
+// ******************************************************************************************************************************************************
+
+    function  videopic(data){
+        console.log(data)
+
+        let div=document.createElement("div");
+
+        
+
+      let title=document.createElement("h2");
+      title.innerText=data.Title;
+
+        let rrr=document.createElement("img");
+       rrr.src=data.Poster;
+
+       let Released=document.createElement("h3")
+           Released.innerText=data.Year;
+
+        // let imdbRating=document.createElement("h3")
+        // imdbRating.innerText=  data.imdbRating
+        
+
+         div.append(rrr,title,Released)
+          document.getElementById("movies1").append(div);
+    }
+
+ 
+</script> 
