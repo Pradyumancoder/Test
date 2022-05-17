@@ -1,0 +1,56 @@
+
+   #navbar{
+    background-color: aliceblue;
+    color: blue;
+    justify-content: center;
+    font-family: sans-serif;
+    height: 50px;
+    display: flex;
+
+}
+#submit{
+    border: 0.5px solid red;
+    background-color: deepskyblue;
+    margin-top: 15px;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+#menu{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    background-color: red;
+    color: yellow;
+    font-size: large;
+    font-family: sans-serif;
+
+
+}
+input{
+    cursor: pointer;
+}
+#choose{
+    text-align: center;
+    font-family: sans-serif;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    justify-content: center;
+}
+#container>div{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 514px;
+    margin: auto;
+}
+p{
+    font-size: large;
+    color: crimson;
+    font-family: sans-serif;
+}
+h3{
+    font-family: sans-serif;
+}
