@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance,encapsulation,abstraction,polymorphisom</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+    // inheritance
+
+    // class cat {
+    //     constructor(n,a,b){
+    //         this.name=n;
+    //         this.color=a;
+    //         this.family=b;
+    //     }
+    // }
+    // class family extends cat{
+    //     constructor(n,a,b){
+    //  super(n,a,b)
+    //   this.leg=4;
+    //     }
+    // }
+   
+    // let s1=new family ("pritu","white",true)
+    // console.log("s1:",s1)
+
+    // **************************************************
+
+    // encapsulation
+
+
+    "Encapsulation means information hiding. It's about hiding as much as possible of the object's internal parts and exposing a minimal public interface. The simplest and most elegant way to create encapsulation in JavaScript is using closures. A closure can be created as a function with private state"
+
+    // class onlinepayment{
+    //     constructor(){
+    //         let name;
+    //         let security;
+    //     }
+    //     getName(){
+    //         return this.name;
+    //     }
+    //     setName(value){
+    //         this.name=value;
+    //     }
+    // }
+    // let el = new onlinepayment();
+    // el.setName("aman");
+    // console.log(el.getName());
+
+
+// ****************************************************
+// abstraction
+
+
+"JavaScript Abstraction"
+"An abstraction is a way of hiding the implementation details and showing only the functionality to the users. In other words, it ignores the irrelevant details and shows only the required one."
+
+// class crickter{
+//     constructor(n,r){
+//         this.name=n;
+//         this.skill=r;
+//          this.team=[];
+// }
+// playingcricket(club){
+//     this.team.push(club)
+// }
+// }
+// let el= new crickter("dhoni","finisher");
+//   el.playingcricket("CSk");
+//   console.log("el:",el);
+
+
+// ******************************************************
+
+// polymorphism
+
+
+6
+
+"Polymorphism means Ability to call the same method on different objects and each object responds in different way is called POLYMORPHISM."
+
+class vehicle{
+    run(){
+        console.log("vehicle is running")
+    }
+}
+class car extends vehicle{
+    run(){
+        console.log("car is running");
+    }
+}
+class truck extends vehicle{
+    run(){
+        console.log("truck is runnign")
+    }
+}
+let v1= new vehicle();
+let v2 =new car();
+let v3 =new truck();
+v2.run()
+
+
+
+
+</script>
