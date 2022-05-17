@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow</title>
+</head>
+<body>
+    <!-- //<button onclick="start">slideshow</button> -->
+    <div id="images"></div>
+</body>
+</html>
+
+<script>
+    let movies=["https://thumbs.dreamstime.com/z/shop-building-colorful-isolated-white-33822015.jpg",
+             "https://swaddle-wkwcb6s.stackpathdns.com/wp-content/uploads/2017/04/Taare-Zameen-Par@2x-208x300.jpg" ,
+            "https://media.istockphoto.com/photos/single-family-new-construction-home-in-suburb-neighborhood-in-the-picture-id1147674297?b=1&k=20&m=1147674297&s=170667a&w=0&h=PSSRXxU3hgcuy6K5RLiN2YYTSG6IhKu9DVG0WgRp_fc="]
+//  let images_div=document.getElementById("image")
+ let i=0;
+//  let id;
+//  function start(){
+//      let images_arr=JSON.parse(localStorage.getItem("images"))
+
+
+ let img=document.createElement("img")
+ id=setInterval(function(){
+     if(i==movies.length){
+         i=0
+     }
+     else{
+         img.src=movies[i];
+         document.getElementById("images").append(img)
+    
+     i++;
+     }
+ } ,2000)
+
+ 
+
+
+
+</script>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="url" id="food">
+    <button onclick="orderfood()">Order food</button>
+    <div id="image"></div>
+</body>
+</html>
+<script>
+let imag=JSON.parse(localStorage.getItem("image"))||[]
+
+
+function orderfood(){
+ 
+let img=document.getElementById("food").value;
+
+
+imag.push(img)
+let images=localStorage.setItem("imag" ,JSON.stringify(imag))
+
+}
+</script>
