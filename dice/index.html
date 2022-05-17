@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 50%;
+            display: flex;
+            gap: 10px;
+            margin: auto;
+        }
+        #member1,#member2,#member3{
+            height:95px;
+            width: 17%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+        <div id="box">
+    <div id="member1"></div>
+    <div id="member2"></div>
+    <div id="member3"></div>
+</div>
+<button id="roll"> ROLL THE DICE</button>
+<div id="winner"></div>
+</body>
+</html>
+<script>
+    document.querySelector("#roll").addEventListener("click",mylodo);
+    function mylodo(){
+        // event.preventDefault()
+        var member1=document.querySelector("#member1");
+        member1.innerHTML=Math.floor((Math.random() * 6) + 1);
+        member1.style.color="blue"
+
+        var member2=document.querySelector("#member2");
+        member2.innerHTML=Math.floor((Math.random() * 6) + 1);
+        member2.style.color="blue"
+
+
+        var member3=document.querySelector("#member3");
+        member3.innerHTML=Math.floor((Math.random() * 6) + 1);
+        member3.style.color="blue"
+
+        if(member1.innerHTML>member2.innerHTML&&member1.innerHTML>member3.innerHTML){
+            var x=document.querySelector("#winner")
+            x.innerHTML="winner is 1"
+            member1.style.background="green"
+
+        }
+else if(member2.innerHTML>member1.innerHTML&& member2.innerHTML>member3.innerHTML){
+    var y=document.querySelector("#winner")
+    y.innerHTML="winner is 2"
+    member2.style.background="green"
+}
+
+else{
+    var z=document.querySelector("#winner")
+    z.innerHTML="winner is 3"
+    member3.style.background="green"
+}
+    }    
+   
+
+
+
+</script>
