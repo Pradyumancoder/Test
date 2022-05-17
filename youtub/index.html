@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/42492c0583.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+
+    <style>
+        #show_videos{
+            display: grid;
+            grid-template-columns: repeat(4,20%);
+            grid-gap: 5%;
+        }
+        #container{
+            display: flex;
+            height: 100px;
+            width: 100%;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+        #query{
+            height: 30px;
+    width: 466px;
+    margin-left: 288px;
+    margin-top: 29px;
+        }
+        button{
+            height: 30px;
+    width: 89px;
+    margin-top: 29px;
+        }
+        h2{
+            margin-top: 51px;
+    position: relative;
+    top: 68px;
+    left: 59px;
+        }
+        body{
+            margin-top: -100px;
+            background-color: aquamarine;
+
+        }
+        img{
+            height: 145px;
+    position: relative;
+    top: 69px;
+    left: 30;
+           }
+.fa-solid {
+    margin-left: 20px;
+    font-size: 25px;
+    position: relative;
+    top: 5px;
+}
+#box{
+    background-color:white;
+}
+
+    </style>
+</head>
+<body>
+    <div id="box">
+    <i class="fa-solid fa-bars"></i>
+      <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube2_colored_svg-512.png" alt="">
+    <input type="text" id="query" placeholder="Search">
+    <button onclick="searchVideos()">Search</button>
+    <i class="fa-solid fa-microphone"></i>
+
+    <i style="left: 40px; top: 5px;" class="fa-solid fa-video"></i>
+    <img style="height: 50px;width: 50px;margin-bottom: 50px;margin-left: 29px ;" 
+    src="https://icons.iconarchive.com/icons/bokehlicia/captiva/48/web-chrome-app-icon.png" alt="">
+    <i style="font-size: 30px;position: relative;left: 40px; top: 8px;" class="fa-solid fa-bell"></i>
+    <br><br>
+    <hr>
+</div>
+
+    <br><br>
+
+    <div id="show_videos"></div>
+    
+</body>
+</html>
+<script src="index.js"></script>
+
+
+
+
+
+
